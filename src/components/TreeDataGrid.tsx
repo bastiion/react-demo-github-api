@@ -185,49 +185,6 @@ const columnGroupingModel = [
 
 ]
 
-/*const criteria = [
-  {
-    name: 'Funktionelle Eignung',
-    path: ['Funktionelle Eignung']
-  },
-  {
-    name: 'Vollständigkeit',
-    path: ['Funktionelle Eignung', 'Vollständigkeit']
-  },
-  {
-    name: 'Korrektheit',
-    path: ['Funktionelle Eignung', 'Korrektheit']
-  },
-  {
-    name: 'Angemessenheit',
-    path: ['Funktionelle Eignung', 'Angemessenheit']
-  },
-  {
-    name: 'Wartbarkeit',
-    path: ['Wartbarkeit']
-  },
-  {
-    name: 'Weiterentwicklung',
-    path: ['Wartbarkeit', 'Weiterentwicklung']
-  },
-  {
-    name: 'Pflege',
-    path: ['Wartbarkeit', 'Pflege']
-  },
-  {
-    name: 'Client Abhängigkeiten Updaten',
-    path: ['Wartbarkeit', 'Pflege', 'Frontend Abhängigkeiten Updaten']
-  },
-  {
-    name: 'Server Abhängigkeiten Updaten',
-    path: ['Wartbarkeit', 'Pflege', 'Server Abhängigkeiten Updaten']
-  },
-  {
-    name: 'Continuous Integration',
-    path: ['Wartbarkeit', 'Continuous Integration']
-  },
-
-]*/
 const criteriaData = flattenDictionary(criteria)
     .map((c, index) => ({...c, id: (c as any).id ||  makeURI(SHA256(c.path.join()+c.name).toString(enc.Hex))}))
 
