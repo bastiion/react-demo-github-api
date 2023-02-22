@@ -6,7 +6,7 @@ const authConfig: TAuthConfig = {
   authorizationEndpoint: 'https://github.com/login/oauth/authorize',
   logoutEndpoint: 'https://github.com/login/oauth/logout',
   tokenEndpoint: 'https://github.gra.one/api/token',
-  redirectUri: 'http://localhost:3000/',
+  redirectUri: window.location.href || 'http://localhost:3000/',
   preLogin: () =>  localStorage.setItem('preLoginPath', window.location.pathname),
   postLogin: () =>  window.location.replace(localStorage.getItem('preLoginPath') || ''),
   decodeToken: false,
